@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script defer src="/js.js"></script>
+    <title>Question</title>
+</head>
+<body id="questions">
+    <div class="container2">
+        <p id="ballColor">Ball Color: <span id="ballColorValue"></span></p>
+        <p id="ballRatio">Ball Ratio: <span id="ballRatioValue"></span></p>
+        <p id="groupSize">Group Size: <span id="groupSizeValue"></span></p>
+        <p id="LotteryCondition">LotteryCondition: <span id="LotteryConditionValue"></span></p>
+        <p id="pitcherColor">What do you think the color of the pitcher is?</p>
+        <label>
+            <input type="radio" name="pitcherColor" value="red" required> Red
+        </label>
+        <label>
+            <input type="radio" name="pitcherColor" value="blue" required> Blue
+        </label>
+
+        <p id="participateLottery">Do you want to participate in the lottery?</p>
+        <label>
+            <input type="radio" name="participateLottery" value="yes" required> Yes
+        </label>
+        <label>
+            <input type="radio" name="participateLottery" value="no" required> No
+        </label>
+        <form id="codeForm" action="http://localhost:3000/submit-answer" method="post" onsubmit="captureChoices()">
+            <input type="hidden" id="userCode" name="userCode">
+             <input type="hidden" id="ballRatioInput" name="ballRatio">
+             <input type="hidden" id="groupSizeInput" name="groupSize">
+            <input type="hidden" id="ballColorInput" name="ballColor">
+            <input type="hidden" id="LotteryConditionInput" name="LotteryCondition">
+            <input type="hidden" id="pitcherColorChoice" name="pitcherColorChoice">
+            <input type="hidden" id="participateLotteryChoice" name="participateLotteryChoice">
+            <button type="submit" id="submitAnswer">Submit</button>
+    </form>
+    </div>
+
+   </body>
+</html>
